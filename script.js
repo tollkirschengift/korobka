@@ -100,7 +100,7 @@ function showImages(correctNumber) {
 const player = document.getElementById("player")
 
 function setAudio (audio) {
-    player.src = `files/audio/${audio}.MP3`;
+    player.src = `files/audio/${audio}.mp3`;
 }
 
 function playAudio () {
