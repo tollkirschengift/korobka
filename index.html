@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Korobka</title>
+
+     <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        p {
+    font-family: "Courier New", monospace;
+    font-size: 28px;
+    
+    line-height: 1.5;
+    letter-spacing: 1px;
+
+    max-width: 700px;
+    text-align: center;
+    min-height: 3em;
+}
+
+        img {
+            max-width: 80%;
+            height: auto;
+        }
+
+        #image-link {
+    opacity: 0.3;
+    pointer-events: none;
+    cursor: default;
+    transition: opacity 0.5s ease;
+}
+
+#image-link.active {
+    opacity: 1;
+    pointer-events: auto;
+    cursor: pointer;
+}
+    </style>
+</head>
+<body>
+
+    <p id="typing-text"></p>
+
+    <img onclick="location.href='welcome.html'" id="image-link" src="files/korobka.jpg" alt="Описание картинки">
+
+</body>
+
+<script>
+        const text = "Вот это да! Кажется, ты получила посылку от Amazon! Что же там может быть? Ты игнорируешь то, что в России нет Amazon и спешишь открыть ее. Но вот незадача: коробка на экране компьютера? Что же делать?";
+
+        const typingElement = document.getElementById("typing-text");
+        const imageLink = document.getElementById("image-link");
+        let index = 0;
+
+        function typeWriter() {
+            if (index < text.length) {
+                typingElement.textContent += text.charAt(index);
+                index++;
+                setTimeout(typeWriter, 70);
+            }  else {
+        imageLink.classList.add("active");
+    }
+        }
+
+        typeWriter();
+    </script>
+</html>
