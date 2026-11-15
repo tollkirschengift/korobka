@@ -22,6 +22,16 @@ main {
     
 }
 
+
+main.congrats {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: self-start;
+   
+    
+}
+
 h2 {
     color: #fff;
 }
