@@ -49,7 +49,7 @@ function nextRound() {
     picsContainer.innerHTML = "";
 
     const memePreview = document.getElementById("meme-preview");
-    memePreview.src = "";
+  //  memePreview.src = "f";
 
     setAudio(currentAudio);
     showImages(currentAudio);
